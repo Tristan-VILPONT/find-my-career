@@ -36,4 +36,4 @@ A country-specific version can live in its own repository. In that case, link ba
 
 ## Contact
 
-The public contact address is [tristanvilpont@hotmail.fr](mailto:tristanvilpont@hotmail.fr). The public repository is [https://github.com/Tristan-VILPONT/find-my-career](https://github.com/Tristan-VILPONT/find-my-career).
+The public contact address is [contact@quelmetiermecorrespond.fr](mailto:contact@quelmetiermecorrespond.fr). The public repository is [https://github.com/Tristan-VILPONT/find-my-career](https://github.com/Tristan-VILPONT/find-my-career).

@@ -115,6 +115,7 @@ ${paragraphs}
           <p>Le code et la méthode sont en accès libre : <a href="${escapeHtml(SOURCE_REPO_URL)}" target="_blank" rel="noreferrer">Code source et méthode libres</a>.</p>
           <h2>D'où viennent les infos</h2>
 ${sources}
+          <p>Une idée, une remarque, un métier qui manque ? Écris-moi : <a href="mailto:contact@quelmetiermecorrespond.fr">contact@quelmetiermecorrespond.fr</a></p>
         </article>`)
 }
 

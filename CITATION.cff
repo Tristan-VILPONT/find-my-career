@@ -6,7 +6,7 @@ type: software
 authors:
   - family-names: Vilpont
     given-names: Tristan
-    email: tristanvilpont@hotmail.fr
+    email: contact@quelmetiermecorrespond.fr
 license: "MIT AND ODbL-1.0 AND CC-BY-4.0"
 url: "https://quelmetiermecorrespond.fr"
 repository-code: "https://github.com/Tristan-VILPONT/find-my-career"
@@ -23,7 +23,7 @@ preferred-citation:
   authors:
     - family-names: Vilpont
       given-names: Tristan
-      email: tristanvilpont@hotmail.fr
+      email: contact@quelmetiermecorrespond.fr
   title: "Quel métier me correspond ?"
   year: 2026
   url: "https://quelmetiermecorrespond.fr"

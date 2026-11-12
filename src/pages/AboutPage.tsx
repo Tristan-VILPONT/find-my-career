@@ -57,6 +57,15 @@ export function AboutPage() {
       <p>
         Le jeu de données dérivé publié avec ce site reste sous licence ODbL : si tu le réutilises, tu dois le partager aux mêmes conditions et citer l'Onisep.
       </p>
+      <p>
+        Une idée, une remarque, un métier qui manque ? Écris-moi :{" "}
+        <a
+          className="font-semibold text-ink underline decoration-accent underline-offset-4"
+          href="mailto:contact@quelmetiermecorrespond.fr"
+        >
+          contact@quelmetiermecorrespond.fr
+        </a>
+      </p>
     </article>
   )
 }

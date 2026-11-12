@@ -8,7 +8,7 @@ Live demo: [https://quelmetiermecorrespond.fr](https://quelmetiermecorrespond.fr
 
 Source code: [https://github.com/Tristan-VILPONT/find-my-career](https://github.com/Tristan-VILPONT/find-my-career)
 
-Created by **Tristan Vilpont**. Public contact: [tristanvilpont@hotmail.fr](mailto:tristanvilpont@hotmail.fr). Version française : [README.fr.md](README.fr.md).
+Created by **Tristan Vilpont**. Public contact: [contact@quelmetiermecorrespond.fr](mailto:contact@quelmetiermecorrespond.fr). Version française : [README.fr.md](README.fr.md).
 
 No account is required. Answers, favourites and comparisons stay in the browser (`localStorage`). Nothing is sent to a server.
 
@@ -106,7 +106,7 @@ Issues and pull requests are welcome, including adaptations for other countries.
 
 Created by **Tristan Vilpont**.
 
-Public contact: [tristanvilpont@hotmail.fr](mailto:tristanvilpont@hotmail.fr)
+Public contact: [contact@quelmetiermecorrespond.fr](mailto:contact@quelmetiermecorrespond.fr)
 
 Live site: [https://quelmetiermecorrespond.fr](https://quelmetiermecorrespond.fr)
 

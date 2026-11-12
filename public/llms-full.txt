@@ -19,7 +19,7 @@ The project is published so that other countries can reuse the idea with their o
 - France Travail ROME and BMO data: Licence Ouverte 2.0
 - French adaptation guide: https://github.com/Tristan-VILPONT/find-my-career/blob/main/docs/ADAPTER.fr.md
 - English adaptation guide (33 countries): https://github.com/Tristan-VILPONT/find-my-career/blob/main/docs/ADAPT.md
-- Public contact: tristanvilpont@hotmail.fr
+- Public contact: contact@quelmetiermecorrespond.fr
 
 ## Intention
 
@@ -86,4 +86,4 @@ Le guide d'adaptation couvre 33 pays, avec des sources officielles de métiers c
 Auteur : Tristan Vilpont
 Site : https://quelmetiermecorrespond.fr/
 Dépôt : https://github.com/Tristan-VILPONT/find-my-career
-Contact public : tristanvilpont@hotmail.fr
+Contact public : contact@quelmetiermecorrespond.fr

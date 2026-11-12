@@ -2,7 +2,7 @@
 
 > Trouve un métier qui te ressemble. Quiz gratuit d'orientation pour les adolescents, à partir des fiches métiers de l'Onisep, sans compte.
 
-« Quel métier me correspond ? » is a free French career-orientation website created by Tristan Vilpont. It helps teenagers around age 15, as well as parents and teachers, explore occupations from official sources. There is no account: answers, favourites and comparisons stay in the browser, and no personal data is sent to a server. The code (MIT), the method (CC BY 4.0) and a replication guide for 33 countries are published at https://github.com/Tristan-VILPONT/find-my-career. Public contact: tristanvilpont@hotmail.fr
+« Quel métier me correspond ? » is a free French career-orientation website created by Tristan Vilpont. It helps teenagers around age 15, as well as parents and teachers, explore occupations from official sources. There is no account: answers, favourites and comparisons stay in the browser, and no personal data is sent to a server. The code (MIT), the method (CC BY 4.0) and a replication guide for 33 countries are published at https://github.com/Tristan-VILPONT/find-my-career. Public contact: contact@quelmetiermecorrespond.fr
 
 ## En bref
 
@@ -52,4 +52,4 @@ Si tu réutilises le jeu de données dérivé, tu dois le partager aux mêmes co
 Site créé par Tristan Vilpont.
 Adresse principale : https://quelmetiermecorrespond.fr/
 Code source et méthode : https://github.com/Tristan-VILPONT/find-my-career
-Contact public : tristanvilpont@hotmail.fr
+Contact public : contact@quelmetiermecorrespond.fr

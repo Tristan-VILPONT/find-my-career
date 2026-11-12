@@ -10,7 +10,7 @@ useDefault = true
 description = "Browser localStorage keys, and the public contact email"
 regexes = [
   '''quel-metier\.(quiz|favoris|comparer)\.v1''',
-  '''tristanvilpont@hotmail\.fr''',
+  '''contact@quelmetiermecorrespond\.fr''',
 ]
 
 [[rules]]
