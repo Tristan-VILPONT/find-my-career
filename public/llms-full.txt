@@ -1,0 +1,89 @@
+# Quel métier me correspond ? — description détaillée
+
+> Trouve un métier qui te ressemble. Quiz gratuit d'orientation pour les adolescents, à partir des fiches métiers de l'Onisep, sans compte.
+
+This file is a longer companion to https://quelmetiermecorrespond.fr/llms.txt. It describes the live site, the open-source project, the licences, and how another country can adapt the method with its own official occupation sources.
+
+## English summary
+
+« Quel métier me correspond ? » (https://quelmetiermecorrespond.fr) is a free, non-commercial French website created by Tristan Vilpont. It helps teenagers around age 15 — and parents or teachers who accompany them — explore occupations from what matters to them, rather than from a psychological test or a single verdict.
+
+The quiz asks 12 questions, then ranks 1,138 official Onisep occupation sheets. Users can also browse the catalogue, save favourites and compare sheets. There is no account, no advertising, and no personal data is sent to a server: answers, favourites and comparisons stay in the browser.
+
+The project is published so that other countries can reuse the idea with their own occupations, official sources and government sites:
+
+- Repository: https://github.com/Tristan-VILPONT/find-my-career
+- Code: MIT licence, copyright Tristan Vilpont
+- Method, scoring grid and documentation: CC BY 4.0
+- Onisep data and the derived catalogue: ODbL 1.0 (share-alike, with attribution to Onisep)
+- France Travail ROME and BMO data: Licence Ouverte 2.0
+- French adaptation guide: https://github.com/Tristan-VILPONT/find-my-career/blob/main/docs/ADAPTER.fr.md
+- English adaptation guide (33 countries): https://github.com/Tristan-VILPONT/find-my-career/blob/main/docs/ADAPT.md
+- Public contact: tristanvilpont@hotmail.fr
+
+## Intention
+
+Tristan Vilpont a créé le site à partir d'une grille personnelle qu'il s'était faite pour choisir un métier. L'idée est d'aider des jeunes vers 15 ans, au collège ou au lycée, quand on leur demande déjà « tu veux faire quoi plus tard ? ». La question du site est plutôt : « qu'est-ce qui compte pour toi ? ».
+
+Ce n'est pas un test psychologique et ce n'est pas un verdict. C'est une façon de parcourir les fiches métiers officielles avec ses propres critères, pour décider de manière plus éclairée.
+
+## Fonctionnement du site
+
+Le site est statique, sans backend applicatif. Il est publié à l'adresse https://quelmetiermecorrespond.fr.
+
+1. Un quiz de 12 questions, dans cet ordre : études, lieu, télétravail, horaires, santé, utilité, résistance aux crises et aux robots, région / mobilité, temps libre, parcours, salaire, investir.
+2. Un classement des 1 138 fiches Idéo de l'Onisep, selon les réponses.
+3. Un catalogue pour explorer les métiers, des favoris, et une comparaison de fiches.
+4. Chaque fiche renvoie vers la page Onisep, qui reste la référence.
+
+Il n'y a pas de compte. Les réponses, les favoris et la comparaison restent dans le navigateur. Rien n'est envoyé à un serveur. Aucune donnée personnelle n'est envoyée. Le site n'affiche pas de publicité.
+
+Le barème s'appuie sur les identifiants des questions, pas sur leur ordre d'affichage.
+
+## Pages principales
+
+- Accueil / quiz : https://quelmetiermecorrespond.fr/
+- Explorer les métiers : https://quelmetiermecorrespond.fr/explorer
+- À propos : https://quelmetiermecorrespond.fr/a-propos
+- Fiches métiers : https://quelmetiermecorrespond.fr/metier/{id} (identifiant Onisep, par exemple /metier/579)
+- Plan du site : https://quelmetiermecorrespond.fr/sitemap.xml
+- Fichier court pour les modèles de langage : https://quelmetiermecorrespond.fr/llms.txt
+
+## Données et licences
+
+Les fiches viennent du jeu Données Onisep (Idéo-Fiches métiers), licence ODbL, extraction d'octobre 2026, mises à jour environ dix fois par an sur data.gouv.fr :
+https://www.data.gouv.fr/datasets/ideo-fiches-metiers
+
+Le niveau d'études, les statuts, les centres d'intérêt, les secteurs et le salaire de débutant (quand un montant mensuel brut est clairement écrit) viennent directement des fiches. Le lieu de travail, le télétravail, les horaires, l'utilité, la résistance aux crises et aux robots, et la contrainte géographique sont parfois des estimations déduites des textes. Une estimation est marquée comme telle et pèse deux fois moins dans le score. Elle peut être fausse : la page Onisep reste la référence.
+
+Les données sur le marché du travail viennent de France Travail, en open data (Licence Ouverte) :
+
+- ROME 4.0 (version d'octobre 2026), pour les conditions de travail et les statuts d'emploi :
+  https://www.data.gouv.fr/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome
+- Enquête Besoins en Main-d'Œuvre (BMO) 2026, pour les projets de recrutement et les difficultés de recrutement, par famille de métiers FAP-2021 :
+  https://www.data.gouv.fr/datasets/enquete-besoins-en-main-doeuvre-bmo
+- Table de passage FAP-2021 / ROME de la Dares :
+  https://www.data.gouv.fr/datasets/la-nomenclature-des-familles-professionnelles-2021
+
+Les chiffres BMO sont ceux de la famille professionnelle, pas du métier exact. Les critères de la grille de l'auteur (parcours salarié → indépendant → propriétaire, investissement, temps libre, santé) sont déduits de ces données et des fiches Onisep, et marqués « (estimation) » quand ce n'est pas écrit noir sur blanc.
+
+Le jeu de données dérivé publié avec le site reste sous licence ODbL : si on le réutilise, on doit le partager aux mêmes conditions et citer l'Onisep.
+
+## Projet open source
+
+Tout est publié pour être recopié ou adapté, gratuitement, avec le crédit de Tristan Vilpont :
+
+- Dépôt public : https://github.com/Tristan-VILPONT/find-my-career
+- Code : MIT
+- Méthode, grille et guides : CC BY 4.0
+- Guide français : https://github.com/Tristan-VILPONT/find-my-career/blob/main/docs/ADAPTER.fr.md
+- Guide anglais : https://github.com/Tristan-VILPONT/find-my-career/blob/main/docs/ADAPT.md
+
+Le guide d'adaptation couvre 33 pays, avec des sources officielles de métiers classées par région (Europe, Amérique du Nord, Amérique latine, Asie, Océanie, Afrique). Quand une source nationale fiable manque, il renvoie vers des classifications internationales (ISCO, ESCO, O*NET).
+
+## Contact
+
+Auteur : Tristan Vilpont
+Site : https://quelmetiermecorrespond.fr/
+Dépôt : https://github.com/Tristan-VILPONT/find-my-career
+Contact public : tristanvilpont@hotmail.fr

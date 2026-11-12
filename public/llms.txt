@@ -2,19 +2,34 @@
 
 > Trouve un métier qui te ressemble. Quiz gratuit d'orientation pour les adolescents, à partir des fiches métiers de l'Onisep, sans compte.
 
+« Quel métier me correspond ? » is a free French career-orientation website created by Tristan Vilpont. It helps teenagers around age 15, as well as parents and teachers, explore occupations from official sources. There is no account: answers, favourites and comparisons stay in the browser, and no personal data is sent to a server. The code (MIT), the method (CC BY 4.0) and a replication guide for 33 countries are published at https://github.com/Tristan-VILPONT/find-my-career. Public contact: tristanvilpont@hotmail.fr
+
 ## En bref
 
-« Quel métier me correspond ? » est un site français gratuit créé par Tristan VILPONT. Il aide surtout les jeunes d'environ 15 ans (collège, lycée), ainsi que leurs parents et leurs enseignants, à explorer des métiers à partir de ce qui compte pour eux : ce qui les attire, être utile aux autres, travailler dehors ou dans un bureau, le niveau d'études, le quotidien, le salaire, la possibilité de rester ou de bouger.
+« Quel métier me correspond ? » est un site français gratuit créé par Tristan Vilpont. Il aide surtout les jeunes d'environ 15 ans (collège, lycée), ainsi que leurs parents et leurs enseignants, à explorer des métiers à partir de ce qui compte pour eux : ce qui les attire, être utile aux autres, travailler dehors ou dans un bureau, le niveau d'études, le quotidien, le salaire, la possibilité de rester ou de bouger.
 
 Ce n'est pas un test psychologique et ce n'est pas un verdict. Le quiz pose des questions, puis propose des pistes parmi 1 138 fiches métiers de l'Onisep. On peut aussi parcourir le catalogue, mettre des fiches en favoris et les comparer.
 
-Il n'y a pas de compte. Les réponses, les favoris et la comparaison restent dans le navigateur. Rien n'est envoyé à un serveur.
+Il n'y a pas de compte. Les réponses, les favoris et la comparaison restent dans le navigateur. Rien n'est envoyé à un serveur. Aucune donnée personnelle n'est envoyée. Le site n'affiche pas de publicité.
+
+## Projet libre
+
+Le code, la méthode et un guide de réplication sont en accès libre, pour qu'un autre pays puisse s'en inspirer avec ses propres métiers, ses sources officielles et ses sites d'État.
+
+- Dépôt : https://github.com/Tristan-VILPONT/find-my-career
+- Code : licence MIT, copyright Tristan Vilpont
+- Méthode, grille et documentation : CC BY 4.0
+- Données Onisep et catalogue dérivé : ODbL 1.0 (à partager aux mêmes conditions, avec citation de l'Onisep)
+- Données ROME et BMO (France Travail) : Licence Ouverte 2.0
+- Guide d'adaptation en français : https://github.com/Tristan-VILPONT/find-my-career/blob/main/docs/ADAPTER.fr.md
+- Adaptation guide (English) : https://github.com/Tristan-VILPONT/find-my-career/blob/main/docs/ADAPT.md
+- Version plus détaillée pour les modèles de langage : https://quelmetiermecorrespond.fr/llms-full.txt
 
 ## Pages
 
 - [Accueil / quiz](https://quelmetiermecorrespond.fr/) : démarrer le quiz
 - [Explorer les métiers](https://quelmetiermecorrespond.fr/explorer) : les 1 138 fiches
-- [À propos](https://quelmetiermecorrespond.fr/a-propos) : l'intention du site et l'origine des données
+- [À propos](https://quelmetiermecorrespond.fr/a-propos) : l'intention du site, l'origine des données, et le lien vers le code source
 - Fiches métiers : https://quelmetiermecorrespond.fr/metier/{id} (identifiant Onisep, par exemple /metier/579)
 - Plan du site : https://quelmetiermecorrespond.fr/sitemap.xml
 
@@ -28,10 +43,13 @@ Le niveau d'études, les statuts, les centres d'intérêt, les secteurs et le sa
 Le site ajoute aussi des données de France Travail en open data (Licence Ouverte) : le ROME 4.0 (version d'octobre 2026, conditions de travail et statuts d'emploi) et l'enquête Besoins en Main-d'Œuvre (BMO) 2026 (projets de recrutement et part jugée difficile, par famille de métiers FAP-2021 reliée au ROME par la table de passage de la Dares). Chaque fiche montre aussi les critères de la grille de l'auteur : parcours salarié → indépendant → propriétaire, intérêt pour investir, temps libre et santé, signalés « (estimation) » quand ils sont déduits.
 https://www.data.gouv.fr/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome
 https://www.data.gouv.fr/datasets/enquete-besoins-en-main-doeuvre-bmo
+https://www.data.gouv.fr/datasets/la-nomenclature-des-familles-professionnelles-2021
 
 Si tu réutilises le jeu de données dérivé, tu dois le partager aux mêmes conditions (ODbL) et citer l'Onisep.
 
 ## Contact
 
-Site créé par Tristan VILPONT.
+Site créé par Tristan Vilpont.
 Adresse principale : https://quelmetiermecorrespond.fr/
+Code source et méthode : https://github.com/Tristan-VILPONT/find-my-career
+Contact public : tristanvilpont@hotmail.fr
