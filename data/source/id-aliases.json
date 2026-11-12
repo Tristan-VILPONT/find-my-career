@@ -1,0 +1,4 @@
+{
+  "note": "Correspondances ancien identifiant MET → nouvel identifiant, si l'Onisep renumérote une fiche. Exemple : {\"123\": \"8456\"}.",
+  "alias": {}
+}

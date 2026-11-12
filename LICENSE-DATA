@@ -1,0 +1,118 @@
+Licences of the occupation data
+================================
+
+This repository redistributes official open data and files derived from them.
+Each dataset stays under its own licence. The MIT licence (LICENSE) and the
+CC BY 4.0 licence (LICENSE-DOCS) do not replace those terms.
+
+The derived database (the catalogue served by the site, plus the enrichment
+and grid files) mixes several sources. Because it includes an adaptation of
+Onisep data published under the Open Database License, the derived database
+as a whole is shared under ODbL 1.0 (share-alike). Portions that come from
+France Travail also remain under the Licence Ouverte / Open Licence 2.0,
+which requires attribution (source and date of last update).
+
+1. Onisep — Idéo-Fiches métiers and Idéo-Métiers
+------------------------------------------------
+Licence: Open Database License (ODbL) 1.0
+https://opendatacommons.org/licenses/odbl/1-0/
+
+Sources (verified 12 November 2026):
+- Idéo-Fiches métiers:
+  https://www.data.gouv.fr/datasets/ideo-fiches-metiers
+  also listed as “Licence ODBL” on https://opendata.onisep.fr/
+- Idéo-Métiers Onisep:
+  https://www.data.gouv.fr/datasets/ideo-metiers-onisep
+  licence stated on data.gouv.fr: Open Data Commons Open Database License (ODbL)
+
+Extraction included in this repository: 21 October 2026, 1,138 occupations.
+
+You may share, create and adapt this derived database as long as you:
+
+- attribute Onisep and keep this notice;
+- share any adapted database under the same ODbL licence;
+- keep the database open if you use it to produce a public work (share-alike).
+
+Files mainly covered by this ODbL dataset:
+
+- data/source/fiches-metiers.zip (original XML extract)
+- data/source/ideo-metiers.csv
+- data/source/enrichi.json (six estimated criteria per occupation)
+- data/source/id-aliases.json
+- public/data/catalog.json (file served by the website)
+- src/generated/dataset.ts (counts and Onisep attribution generated with the catalogue)
+- the Onisep-derived fields inside data/source/grille.json
+
+The estimates (place of work, remote work, working hours, usefulness to
+others, resilience to crises and automation, geographic constraint, and the
+grid criteria deduced from Onisep texts) are part of the derived database.
+A value whose confidence is not “high” is an estimate and must stay labelled
+as such.
+
+2. France Travail — ROME 4.0
+----------------------------
+Licence: Licence Ouverte / Open Licence 2.0 (Etalab)
+https://www.data.gouv.fr/pages/legal/licences/etalab-2-0
+
+Source (verified 12 November 2026):
+https://www.data.gouv.fr/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome
+licence stated on data.gouv.fr: Licence Ouverte / Open Licence
+
+Version included here: ROME 4.0 version 62, October 2026
+(file data/source/france-travail/rome-4.0-v462-json.zip).
+
+You may copy, adapt and reuse the data, including commercially, provided you
+mention the source (France Travail) and the date of last update.
+See also France Travail's “Licence ouverte ROME”:
+https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/rome_licence_ouverte.pdf
+
+3. France Travail — Enquête Besoins en Main-d'Œuvre (BMO) 2026
+--------------------------------------------------------------
+Licence: Licence Ouverte / Open Licence
+https://www.data.gouv.fr/pages/legal/licences/etalab-2-0
+
+Source (verified 12 November 2026):
+https://www.data.gouv.fr/datasets/enquete-besoins-en-main-doeuvre-bmo
+licence stated on data.gouv.fr: Licence Ouverte / Open Licence
+
+File included here: data/source/france-travail/Base-open-data-BMO-2026.xlsx
+
+The BMO counts recruitment projects by professional family (FAP-2021), not
+by a single occupation. Hidden cells that protect statistical secrecy are
+not counted. Attribute France Travail and the year of the survey (2026).
+
+4. Dares — FAP-2021 / ROME correspondence table
+-----------------------------------------------
+Source (verified 12 November 2026):
+https://www.data.gouv.fr/datasets/la-nomenclature-des-familles-professionnelles-2021
+https://dares.travail-emploi.gouv.fr/donnees/la-nomenclature-des-familles-professionnelles-2021
+
+On 12 November 2026, the data.gouv.fr catalogue entry states
+“License Not Specified”. This file is an official publication of the Dares
+(statistical service of the French ministry in charge of labour). Cite the
+Dares as the source. If you plan a use that needs a clearly named licence,
+check the Dares page or contact the Dares before relying on a specific
+reuse regime.
+
+File included here:
+data/source/france-travail/Dares_FAP2021_Table_passage_ROME.xlsx
+
+How to attribute in a reuse
+---------------------------
+A short credit like the one already used in the website footer is enough,
+for example:
+
+    Occupation data: Onisep, Idéo-Fiches métiers (October 2026 extract),
+    ODbL 1.0 — https://www.data.gouv.fr/datasets/ideo-fiches-metiers
+
+    Labour-market data: France Travail, ROME 4.0 (October 2026) and
+    Besoins en Main-d'Œuvre 2026, Licence Ouverte — plus the Dares
+    FAP-2021 / ROME correspondence table.
+
+    Method and grid: Tristan Vilpont, « Quel métier me correspond ? »,
+    CC BY 4.0 — https://quelmetiermecorrespond.fr
+
+If you adapt the database (new country, new sources, corrected estimates),
+share your adapted database under ODbL 1.0 as well, and keep attributing
+Onisep. Replace the French sources with your country's official sources
+and follow those sources' own licences.

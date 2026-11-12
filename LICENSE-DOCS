@@ -1,0 +1,32 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The following original texts are © 2026 Tristan Vilpont and are licensed
+under the Creative Commons Attribution 4.0 International License:
+
+- the description of the method and of the personal grid
+  (the criteria, the 12 quiz questions, how answers become a ranking);
+- the guides in docs/ (including docs/ADAPT.md and docs/ADAPTER.fr.md);
+- the public README files, CONTRIBUTING.md and CITATION.cff,
+  except for quotations from official data sources.
+
+Official interest labels, occupation names, and excerpts that come from
+Onisep, France Travail or other public sources remain under those sources'
+licences (see LICENSE-DATA). They are not relicensed under CC BY 4.0.
+
+You are free to copy, share and adapt these texts, including for a version
+of the site in another country, provided you give appropriate credit:
+
+    Method and grid: Tristan Vilpont, « Quel métier me correspond ? »
+    https://quelmetiermecorrespond.fr
+    licensed under CC BY 4.0.
+
+A short credit in your README, on your “About” page, and in any published
+guide is enough. Please also link to the original site.
+
+Full licence text:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Human-readable summary:
+https://creativecommons.org/licenses/by/4.0/
+
+SPDX-License-Identifier: CC-BY-4.0

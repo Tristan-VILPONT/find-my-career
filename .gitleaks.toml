@@ -1,0 +1,29 @@
+# Extend the default secret rules. The public contact email is allowed;
+# Other email addresses, Cloudflare account IDs, API tokens and workers.dev
+# subdomains must still be rejected.
+title = "find-my-career"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Browser localStorage keys, and the public contact email"
+regexes = [
+  '''quel-metier\.(quiz|favoris|comparer)\.v1''',
+  '''tristanvilpont@hotmail\.fr''',
+]
+
+[[rules]]
+id = "private-icloud-address"
+description = "Private iCloud addresses must not be committed"
+regex = '''(?i)[a-z0-9._%+\-]+@icloud\.com'''
+
+[[rules]]
+id = "workers-dev-subdomain"
+description = "Cloudflare workers.dev subdomains must not be committed"
+regex = '''(?i)[a-z0-9][a-z0-9.-]*\.workers\.dev'''
+
+[[rules]]
+id = "cloudflare-account-id"
+description = "Cloudflare account IDs must not be committed"
+regex = '''(?i)(?:cloudflare|account[_-]?id)[^a-f0-9]{0,40}\b[a-f0-9]{32}\b'''

@@ -1,0 +1,3 @@
+# Hébergement Cloudflare Workers : le mode SPA vient de wrangler.jsonc (not_found_handling).
+# Ne pas ajouter « /*  /index.html  200 » ici : Cloudflare le refuse (boucle infinie).
+# Les redirections 301 des anciennes fiches sont ajoutées au build (scripts/prerender.ts).

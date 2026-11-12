@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit Variable", "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces Variable", "Fraunces", Georgia, "Times New Roman", serif;
+  --color-paper: #f3eee6;
+  --color-ink: #1c1714;
+  --color-muted: #4e463f;
+  --color-line: #e3d8cb;
+  --color-card: #fffdf9;
+  --color-accent: #9a3412;
+  --color-accent-strong: #7c2d12;
+  --color-accent-soft: #fde8d8;
+  --color-good: #166534;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+#contenu,
+#contenu .grid,
+#contenu label,
+#contenu article,
+#contenu section,
+#contenu fieldset {
+  min-width: 0;
+}
+
+/* Une grille sans colonnes explicites grandit avec le contenu (le select, surtout). */
+#contenu .grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 768px) {
+  #contenu .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #contenu .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  #contenu .xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+select,
+input,
+textarea {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+button {
+  overflow-wrap: break-word;
+}
+
+.hero-wash {
+  background:
+    radial-gradient(900px 280px at 0% 0%, #fde8d8 0%, transparent 60%),
+    radial-gradient(700px 240px at 100% 0%, #e7f3ea 0%, transparent 55%);
+}
+
+dialog {
+  margin: auto;
+  color: inherit;
+}
+
+dialog::backdrop {
+  background: rgb(28 23 20 / 0.55);
+}
+
+:focus-visible {
+  outline: 2px solid #9a3412;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>%SITE_TITLE%</title>
+    <meta name="description" content="%SITE_DESCRIPTION%" />
+    <meta name="author" content="%SITE_AUTHOR%" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="%SITE_URL%/" />
+    <meta property="og:title" content="%SITE_TITLE%" />
+    <meta property="og:description" content="%SITE_DESCRIPTION%" />
+    <meta property="og:url" content="%SITE_URL%/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="%SITE_NAME%" />
+    <meta property="og:image" content="%SITE_OG_IMAGE%" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="%SITE_NAME% — %SITE_TAGLINE%" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="%SITE_TITLE%" />
+    <meta name="twitter:description" content="%SITE_DESCRIPTION%" />
+    <meta name="twitter:image" content="%SITE_OG_IMAGE%" />
+    <meta name="theme-color" content="#9a3412" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <script type="application/ld+json" id="jsonld">%SITE_JSONLD%</script>
+    <style>
+      body { margin: 0; background: #f3eee6; color: #1c1714; font-family: Georgia, serif; }
+      #boot { max-width: 40rem; margin: 0 auto; padding: 2.5rem 1.25rem; }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="boot">
+        <p>%SITE_NAME%</p>
+        <p>%SITE_TAGLINE%</p>
+        <p>Le quiz se charge…</p>
+      </div>
+    </div>
+    <noscript>
+      <p style="max-width: 40rem; margin: 1rem auto; padding: 0 1.25rem">
+        %SITE_NAME% a besoin de JavaScript pour le quiz. Tes réponses ne partent pas d'ici : tout se passe dans ton navigateur.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

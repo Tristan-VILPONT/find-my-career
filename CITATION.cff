@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software or this method, please cite it as below, and also credit the official data sources listed in LICENSE-DATA."
+title: "Quel métier me correspond ?"
+abstract: "A free website that helps teenagers explore official occupations from what matters to them. The method, the personal grid and the source code are shared so other countries can reuse the idea with their own public data."
+type: software
+authors:
+  - family-names: Vilpont
+    given-names: Tristan
+    email: tristanvilpont@hotmail.fr
+license: "MIT AND ODbL-1.0 AND CC-BY-4.0"
+url: "https://quelmetiermecorrespond.fr"
+repository-code: "https://github.com/Tristan-VILPONT/find-my-career"
+keywords:
+  - career guidance
+  - orientation
+  - occupations
+  - open data
+  - education
+  - Onisep
+  - France Travail
+preferred-citation:
+  type: software
+  authors:
+    - family-names: Vilpont
+      given-names: Tristan
+      email: tristanvilpont@hotmail.fr
+  title: "Quel métier me correspond ?"
+  year: 2026
+  url: "https://quelmetiermecorrespond.fr"
+  repository-code: "https://github.com/Tristan-VILPONT/find-my-career"

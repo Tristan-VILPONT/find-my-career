@@ -1,0 +1,9 @@
+{
+  "name": "quel-metier-me-correspond",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application",
+    "html_handling": "auto-trailing-slash"
+  }
+}

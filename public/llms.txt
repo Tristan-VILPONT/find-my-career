@@ -1,0 +1,37 @@
+# Quel métier me correspond ?
+
+> Trouve un métier qui te ressemble. Quiz gratuit d'orientation pour les adolescents, à partir des fiches métiers de l'Onisep, sans compte.
+
+## En bref
+
+« Quel métier me correspond ? » est un site français gratuit créé par Tristan VILPONT. Il aide surtout les jeunes d'environ 15 ans (collège, lycée), ainsi que leurs parents et leurs enseignants, à explorer des métiers à partir de ce qui compte pour eux : ce qui les attire, être utile aux autres, travailler dehors ou dans un bureau, le niveau d'études, le quotidien, le salaire, la possibilité de rester ou de bouger.
+
+Ce n'est pas un test psychologique et ce n'est pas un verdict. Le quiz pose des questions, puis propose des pistes parmi 1 138 fiches métiers de l'Onisep. On peut aussi parcourir le catalogue, mettre des fiches en favoris et les comparer.
+
+Il n'y a pas de compte. Les réponses, les favoris et la comparaison restent dans le navigateur. Rien n'est envoyé à un serveur.
+
+## Pages
+
+- [Accueil / quiz](https://quelmetiermecorrespond.fr/) : démarrer le quiz
+- [Explorer les métiers](https://quelmetiermecorrespond.fr/explorer) : les 1 138 fiches
+- [À propos](https://quelmetiermecorrespond.fr/a-propos) : l'intention du site et l'origine des données
+- Fiches métiers : https://quelmetiermecorrespond.fr/metier/{id} (identifiant Onisep, par exemple /metier/579)
+- Plan du site : https://quelmetiermecorrespond.fr/sitemap.xml
+
+## Données
+
+Les fiches viennent du jeu Données Onisep (Idéo-Fiches métiers), licence ODbL :
+https://www.data.gouv.fr/datasets/ideo-fiches-metiers
+
+Le niveau d'études, les statuts, les centres d'intérêt, les secteurs et le salaire de débutant (quand un montant mensuel brut est clairement écrit) viennent directement des fiches. Certains autres critères (lieu de travail, télétravail, horaires, utilité, résistance aux crises et aux robots, contrainte géographique) sont parfois des estimations déduites des textes ; une estimation est signalée et pèse deux fois moins dans le score. La page Onisep reste la référence.
+
+Le site ajoute aussi des données de France Travail en open data (Licence Ouverte) : le ROME 4.0 (version d'octobre 2026, conditions de travail et statuts d'emploi) et l'enquête Besoins en Main-d'Œuvre (BMO) 2026 (projets de recrutement et part jugée difficile, par famille de métiers FAP-2021 reliée au ROME par la table de passage de la Dares). Chaque fiche montre aussi les critères de la grille de l'auteur : parcours salarié → indépendant → propriétaire, intérêt pour investir, temps libre et santé, signalés « (estimation) » quand ils sont déduits.
+https://www.data.gouv.fr/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome
+https://www.data.gouv.fr/datasets/enquete-besoins-en-main-doeuvre-bmo
+
+Si tu réutilises le jeu de données dérivé, tu dois le partager aux mêmes conditions (ODbL) et citer l'Onisep.
+
+## Contact
+
+Site créé par Tristan VILPONT.
+Adresse principale : https://quelmetiermecorrespond.fr/
