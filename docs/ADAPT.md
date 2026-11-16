@@ -88,8 +88,8 @@ The code that does this is in `src/lib/scoring.ts` and `src/lib/grille.ts`. The 
 - “It doesn’t matter” is skipped: that question is not used.
 - If a criterion is unknown, the occupation is not punished.
 - An official, clearly stated value has weight 1. An estimate has weight 0.5.
-- Interests are scored with an F1 measure (a balance between “the occupation matches what I ticked” and “it is not tagged with lots of other things I did not tick”), plus a small bonus when several interests match, capped at 0.12.
-- The final percentage is the weighted average of all the parts that were actually used, rounded to a whole number.
+- Interests are scored first on “at least one interest in common” (0.65), then up to +0.25 for covering several ticked interests (at most 3 expected) and up to +0.10 when the ticked interests are central to the occupation. Interests count for half of the final score, so an occupation with no interest in common stays at 50 % or below.
+- The final percentage is half the interest score plus half the weighted average of the other parts that were actually used (or just one of them if the other is missing), rounded to a whole number.
 - Occupations are sorted by that percentage, then by name.
 
 The result screen shows the best matches and a few short reasons (the criteria that scored at least 0.8). Each sheet links back to the official source. The site is a compass, not a decision.

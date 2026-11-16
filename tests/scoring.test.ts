@@ -65,13 +65,23 @@ describe("scoring", () => {
     expect(scoreSalaire(1479, "correct")).toBeCloseTo(0.7)
   })
 
-  it("mélange rappel, précision et un bonus plafonné", () => {
+  it("note les envies : au moins une en commun, puis la couverture et le centre du métier", () => {
     expect(scoreInterets(1, [0])).toBe(1)
-    expect(scoreInterets(1, [0, 1])).toBeCloseTo(2 / 3)
+    expect(scoreInterets(1, [0, 1])).toBeCloseTo(0.75)
     expect(scoreInterets(0, [0])).toBe(0)
+    expect(scoreInterets(2, [0])).toBe(0)
     expect(scoreInterets(15, [0, 1, 2, 3])).toBe(1)
+    expect(scoreInterets(31, [0])).toBeCloseTo(0.92)
     const plusieurs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    expect(scoreInterets(31, plusieurs)).toBeCloseTo(2 / 3 + 0.12)
+    expect(scoreInterets(31, plusieurs)).toBe(1)
+  })
+
+  it("fait compter les envies pour moitié : sans envie commune, pas plus de 50 %", () => {
+    const sansEnvie = scorer(metier({ niveau: 4, crit: 1 + 1 * 8192, interets: 2 }), { etudes: "court", lieu: "dehors" }, [0])
+    expect(sansEnvie.pct).toBe(50)
+    const avecEnvie = scorer(metier({ niveau: 4, crit: 1 + 1 * 8192, interets: 1 }), { etudes: "court", lieu: "dehors" }, [0])
+    expect(avecEnvie.pct).toBe(100)
+    expect(scorer(metier({ interets: 1 }), {}, [0]).pct).toBe(100)
   })
 
   it("donne un poids 0,5 aux critères qui ne sont pas de confiance haute", () => {
@@ -125,6 +135,28 @@ describe("catalogue", () => {
     expect(ranked).toHaveLength(1138)
     expect(ranked[0].pct).toBeGreaterThanOrEqual(ranked[1].pct)
     expect(ranked.every((item) => Number.isFinite(item.pct) && item.pct >= 0 && item.pct <= 100)).toBe(true)
+  })
+
+  it("sort des métiers nature pour un profil « Nature et animaux » (retour Onisep, novembre 2026)", () => {
+    const answers = {
+      etudes: "court",
+      lieu: "bureau",
+      teletravail: "oui",
+      horaires: "reguliers",
+      sante: "oui",
+      utilite: "oui",
+      sensibilite: "plus",
+      geo: "bouger",
+      tempslibre: "unpeu",
+      patron: "egal",
+      salaire: "important",
+      invest: "oui",
+    }
+    const envies = [3, 4, 15]
+    const ranked = rankMetiers(catalog.metiers, answers, envies)
+    expect(ranked.slice(0, 20).every((item) => item.communs.length > 0)).toBe(true)
+    expect(ranked.filter((item) => item.communs.length === 0).every((item) => item.pct <= 50)).toBe(true)
+    expect(ranked.slice(0, 3).map((item) => item.nom).join(" ")).not.toMatch(/BIM|administrateur\/trice de biens|finances publiques/)
   })
 
   it("formule le bandeau de résultats", () => {

@@ -73,7 +73,8 @@ To refresh the French occupation sheets (about ten Onisep extracts a year, no AP
 - “It doesn’t matter” (and “pay is not my main criterion”) is ignored.
 - An unknown enriched criterion does not penalise an occupation.
 - **High** confidence: weight 1. **Medium** or **low** confidence: weight 0.5, and the sheet shows “(estimate)”.
-- Interests combine precision and recall (F1), plus a small bonus capped at 0.12 when several interests match.
+- Interests count for **half** of the score; the other answers share the other half. An occupation with no interest in common therefore cannot go above 50 %.
+- Interest score: 0 with no common interest; 0.65 as soon as one matches, up to +0.25 when the occupation covers several of your interests (at most 3 are expected), and up to +0.10 when your interests are central to the occupation.
 - The starting salary is the first clear monthly gross amount in the Onisep “working life” text. A daily rate or an allowance is ignored. If there is no amount, the occupation is not pushed down the ranking.
 
 The site does not republish the full official sheets, only a short hook and a link back to the source.

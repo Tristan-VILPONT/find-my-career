@@ -37,7 +37,7 @@ export function AboutPage() {
         , extraction d'{DATASET.sourceLabel}. L'Onisep met à jour ce jeu environ dix fois par an sur data.gouv.fr. Il n'y a pas de clé d'API à demander : l'API Onisep est en maintenance, donc le site lit une copie statique.
       </p>
       <p>
-        Le niveau d'études, les statuts, les centres d'intérêt, les secteurs et le salaire de débutant (quand un montant mensuel brut est clairement écrit) viennent directement des fiches. Le lieu de travail, le télétravail, les horaires, l'utilité, la résistance aux crises et aux robots, et la contrainte géographique sont parfois des estimations déduites des textes. Une estimation est marquée comme telle et pèse deux fois moins dans le score. Elle peut être fausse : la page Onisep reste la référence.
+        Le niveau d'études, les statuts, les centres d'intérêt, les secteurs et le salaire de débutant (quand un montant mensuel brut est clairement écrit) viennent directement des fiches. Le lieu de travail, le télétravail, les horaires, l'utilité, la résistance aux crises et aux robots, et la contrainte géographique sont parfois des estimations déduites des textes. Une estimation est marquée comme telle et pèse deux fois moins dans le score. Elle peut être fausse : la page Onisep reste la référence. Dans le score, tes envies (« ce qui te ressemble ») comptent pour moitié, et tes autres réponses pour l'autre moitié : un métier qui ne partage aucune de tes envies ne dépasse pas 50 %.
       </p>
       <p>
         Les données sur le marché du travail viennent de France Travail, en open data (Licence Ouverte) : le{" "}

@@ -99,7 +99,8 @@ Le workflow `.github/workflows/tests.yml` lance les tests et le build. Il ne té
 - « Peu importe » (et « ce n'est pas mon critère n°1 » pour le salaire) ne compte pas.
 - Un critère enrichi inconnu ne pénalise pas.
 - Confiance **haute** : poids 1. Confiance **moyenne** ou **faible** : poids 0,5, et la fiche affiche « (estimation) ».
-- Les centres d'intérêt mélangent précision et rappel (F1), plus un petit bonus plafonné à 0,12 quand plusieurs envies matchent.
+- Les envies (centres d'intérêt) comptent pour **moitié** du score, les autres réponses pour l'autre moitié. Un métier sans aucune envie en commun ne dépasse donc pas 50 %.
+- Note des envies : 0 sans envie commune ; 0,65 dès une envie commune, jusqu'à +0,25 quand le métier couvre plusieurs de tes envies (au plus 3 visées), et jusqu'à +0,10 quand tes envies sont au centre du métier.
 - Le salaire de débutant est le premier montant mensuel brut clairement écrit dans `vie_professionnelle` (« à partir de », minimum d'une fourchette « entre A et B »). Un tarif à la journée ou une indemnité n'est pas retenu. S'il n'y a pas de montant, le métier n'est pas pénalisé.
 
 ## Réserves

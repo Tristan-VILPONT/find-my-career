@@ -183,6 +183,14 @@ export function scoreGeo(code: number, choix: string): number | null {
   return null
 }
 
+/**
+ * Les envies (« ce qui te ressemble ») sont le cœur du classement.
+ * - Aucune envie en commun : 0.
+ * - Une envie en commun : 0,65 au minimum, puis jusqu'à +0,25 quand le métier
+ *   couvre plusieurs de tes envies (on vise au plus 3 envies couvertes, pour ne pas
+ *   pénaliser quelqu'un qui en coche beaucoup).
+ * - +0,10 au plus quand tes envies sont au centre du métier (peu d'autres envies listées).
+ */
 export function scoreInterets(mask: number, selected: number[]): number | null {
   if (selected.length === 0) return null
   let metierCount = 0
@@ -190,13 +198,15 @@ export function scoreInterets(mask: number, selected: number[]): number | null {
     if (hasBit(mask, index)) metierCount += 1
   }
   const matches = selected.filter((index) => hasBit(mask, index)).length
-  if (metierCount === 0) return matches > 0 ? 0.5 : 0
-  const precision = matches / selected.length
-  const recall = matches / metierCount
-  const f1 = precision + recall > 0 ? (2 * precision * recall) / (precision + recall) : 0
-  const bonus = Math.min(0.12, Math.max(0, matches - 1) * 0.04)
-  return Math.min(1, f1 + bonus)
+  if (matches === 0 || metierCount === 0) return 0
+  const cible = Math.min(selected.length, 3)
+  const couverture = cible > 1 ? Math.min(1, (matches - 1) / (cible - 1)) : 1
+  const centre = matches / metierCount
+  return Math.min(1, 0.65 + 0.25 * couverture + 0.1 * centre)
 }
+
+/** Part des envies dans le score final, quand au moins une envie est choisie. */
+export const POIDS_ENVIES = 0.5
 
 export function scorer(metier: Metier, answers: Answers, interets: number[]): ScoreDetail {
   const parts: { label: string; value: number; poids: number }[] = []
@@ -215,7 +225,6 @@ export function scorer(metier: Metier, answers: Answers, interets: number[]): Sc
   }
   if (answers.salaire) push("salaire", "Salaire", scoreSalaire(metier.salaire, answers.salaire))
   const interetValue = scoreInterets(metier.interets, interets)
-  if (interetValue !== null) parts.push({ label: "Ce qui te ressemble", value: interetValue, poids: 1 })
 
   const crit = unpackCrit(metier.crit)
   if (answers.lieu) {
@@ -259,9 +268,14 @@ export function scorer(metier: Metier, answers: Answers, interets: number[]): Sc
   const communs = interets.filter((index) => hasBit(metier.interets, index))
   const raisons = parts.filter((part) => part.value >= 0.8).map((part) => part.label)
   if (communs.length > 0 && !raisons.includes("Ce qui te ressemble")) raisons.push("Ce qui te ressemble")
-  if (parts.length === 0) return { pct: 0, raisons, communs }
+  if (parts.length === 0 && interetValue === null) return { pct: 0, raisons, communs }
   const totalPoids = parts.reduce((sum, part) => sum + part.poids, 0)
-  const avg = parts.reduce((sum, part) => sum + part.value * part.poids, 0) / totalPoids
+  const pratique = totalPoids > 0 ? parts.reduce((sum, part) => sum + part.value * part.poids, 0) / totalPoids : null
+  // Les envies comptent pour moitié : sans aucune envie en commun, un métier ne dépasse pas 50 %.
+  let avg: number
+  if (interetValue === null) avg = pratique ?? 0
+  else if (pratique === null) avg = interetValue
+  else avg = POIDS_ENVIES * interetValue + (1 - POIDS_ENVIES) * pratique
   return { pct: Math.round(avg * 100), raisons, communs }
 }
 
