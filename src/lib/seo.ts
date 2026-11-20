@@ -4,7 +4,7 @@ import { ficheCrit, indicesFromMask, labelsFromMask, unpackCrit } from "./scorin
 import { grilleRows, marcheRows, metierscope, sourcesPhrase } from "./grille.ts"
 import { SITE, SITE_AUTHOR, SITE_DESCRIPTION, SITE_JSONLD, SITE_OG_IMAGE, SITE_TITLE } from "./site.ts"
 import type { Metier } from "./types.ts"
-import { INTERETS, NIVEAUX, SECTEURS, STATUTS, URL_DATA, ficheOnisep } from "./vocab.ts"
+import { INTERETS, INTERETS_AFFICHES, NIVEAUX, SECTEURS, STATUTS, URL_DATA, ficheOnisep } from "./vocab.ts"
 
 export const OG_IMAGE_WIDTH = 1200
 export const OG_IMAGE_HEIGHT = 630
@@ -146,7 +146,7 @@ export function metierRomeLinks(metier: Metier): { code: string; url: string }[]
 
 export function metierInterets(metier: Metier): string[] {
   return indicesFromMask(metier.interets, INTERETS.length)
-    .map((index) => INTERETS[index])
+    .map((index) => INTERETS_AFFICHES[index])
     .filter((label): label is string => Boolean(label))
 }
 

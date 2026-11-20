@@ -67,6 +67,11 @@ export const INTERETS: string[] = [
   "j'ai envie de créer, construire, rénover",
 ]
 
+/** Libellés affichés aux utilisateurs. INTERETS reste le vocabulaire Onisep (données, scoring). */
+export const INTERETS_AFFICHES: string[] = INTERETS.map((label) =>
+  label === "j'aime manier les chiffres" ? "j'aime manier les chiffres (gestion, finance, statistiques)" : label,
+)
+
 export const SECTEURS: string[] = [
   "Artisanat d'art",
   "Maintenance",

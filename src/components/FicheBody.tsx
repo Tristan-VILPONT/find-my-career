@@ -3,7 +3,7 @@ import type { Metier } from "../lib/types.ts"
 import { ficheCrit, indicesFromMask, labelsFromMask, unpackCrit } from "../lib/scoring.ts"
 import { formatSalaire } from "../lib/format.ts"
 import { grilleRows, marcheRows, metierscope, sourcesPhrase } from "../lib/grille.ts"
-import { ficheOnisep, INTERETS, NIVEAUX, SECTEURS, STATUTS } from "../lib/vocab.ts"
+import { ficheOnisep, INTERETS, INTERETS_AFFICHES, NIVEAUX, SECTEURS, STATUTS } from "../lib/vocab.ts"
 
 export function FicheBody({ metier, score }: { metier: Metier; score?: ScoreDetail }) {
   const statuts = labelsFromMask(metier.statuts, STATUTS)
@@ -87,7 +87,7 @@ export function FicheBody({ metier, score }: { metier: Metier; score?: ScoreDeta
                       : "rounded-full bg-paper px-3 py-1 text-sm"
                   }
                 >
-                  {INTERETS[index]}
+                  {INTERETS_AFFICHES[index]}
                   {match ? " (parmi tes envies)" : ""}
                 </li>
               )

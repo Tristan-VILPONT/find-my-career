@@ -4,7 +4,7 @@ import { DATASET } from "../generated/dataset.ts"
 import { SITE } from "../lib/site.ts"
 import { LogoMark } from "../components/LogoMark.tsx"
 import { formatNombre } from "../lib/format.ts"
-import { FAMILIES, INTERETS, QUESTIONS, TOTAL_ETAPES } from "../lib/vocab.ts"
+import { FAMILIES, INTERETS_AFFICHES, QUESTIONS, TOTAL_ETAPES } from "../lib/vocab.ts"
 import { useQuiz } from "../state/QuizProvider.tsx"
 import { FamilyIcon } from "../components/FamilyIcon.tsx"
 import { ProgressBar } from "../components/ProgressBar.tsx"
@@ -191,7 +191,7 @@ export function EnviesScreen() {
                             : { background: "#fffdf9", color: "#1c1714", border: "1px solid #e3d8cb" }
                         }
                       >
-                        {INTERETS[id]}
+                        {INTERETS_AFFICHES[id]}
                       </button>
                     )
                   })}

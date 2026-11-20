@@ -4,7 +4,7 @@ import { DATASET } from "../generated/dataset.ts"
 import { formatNombre } from "../lib/format.ts"
 import { hasBit, hasProfile, norm, rankMetiers } from "../lib/scoring.ts"
 import type { RankedMetier } from "../lib/types.ts"
-import { INTERETS, NIVEAUX, PAGE_SIZE, SECTEURS } from "../lib/vocab.ts"
+import { INTERETS_AFFICHES, NIVEAUX, PAGE_SIZE, SECTEURS } from "../lib/vocab.ts"
 import { FILTRES_GRILLE } from "../lib/grille.ts"
 import { useCatalog } from "../state/CatalogProvider.tsx"
 import { useQuiz } from "../state/QuizProvider.tsx"
@@ -81,7 +81,7 @@ export function ExplorerPage() {
         </label>
         <FilterSelect id="explorer-secteur" label="Secteur" value={secteur} onChange={(value) => update({ secteur: value })} options={SECTEURS} />
         <FilterSelect id="explorer-niveau" label="Niveau d'études" value={niveau} onChange={(value) => update({ niveau: value })} options={NIVEAUX} />
-        <FilterSelect id="explorer-interet" label="Centre d'intérêt" value={interet} onChange={(value) => update({ interet: value })} options={INTERETS} />
+        <FilterSelect id="explorer-interet" label="Centre d'intérêt" value={interet} onChange={(value) => update({ interet: value })} options={INTERETS_AFFICHES} />
         <label className="grid gap-1 text-sm font-semibold" htmlFor="explorer-grille">
           Ta grille et le marché du travail
           <select
